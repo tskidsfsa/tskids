@@ -1,194 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TS KIDS</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reklame+Script&family=Poppins:wght@200;600&display=swap">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&family=Reklame+Script&display=swap');
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
         header {
-            background-color: #0033cc;
+            background-color: #4169e1;
             color: white;
-            padding: 10px 0;
             text-align: center;
-            font-family: 'Reklame Script', cursive;
+            padding: 20px 0;
+        }
+        header img {
+            width: 100px;
+            height: auto;
         }
         nav {
-            display: flex;
-            justify-content: center;
             background-color: #ffcc00;
-            padding: 10px;
+            overflow: hidden;
         }
         nav a {
-            margin: 0 15px;
+            float: left;
+            display: block;
+            color: #4169e1;
+            text-align: center;
+            padding: 14px 16px;
             text-decoration: none;
-            color: #0033cc;
-            font-weight: 600; /* Poppins Semi Bold */
         }
-        section {
+        nav a:hover {
+            background-color: #4169e1;
+            color: white;
+        }
+        .content {
             padding: 20px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .section-title {
-            text-align: center;
+        .section {
             margin-bottom: 20px;
-            color: #0033cc;
+        }
+        h2 {
             font-family: 'Reklame Script', cursive;
+            color: #4169e1;
         }
-        .professores, .locais, .uniforme {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .professores div, .locais div, .uniforme div {
-            flex: 1 1 calc(33% - 20px);
-            margin: 10px;
+        .img-container {
             text-align: center;
+            margin: 20px 0;
         }
-        img {
+        .img-container img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
+        }
+        .img-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .img-grid img {
+            width: 200px;
+            height: auto;
         }
         footer {
-            background-color: #0033cc;
+            background-color: #4169e1;
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: relative;
-            bottom: 0;
+            position: fixed;
             width: 100%;
-            font-family: 'Poppins', sans-serif;
-        }
-        .contact-info {
-            margin-top: 10px;
-        }
-        p {
-            font-weight: 200; /* Poppins Extra Light */
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>TS KIDS</h1>
-</header>
-
-<nav>
-    <a href="#projeto">Projeto</a>
-    <a href="#professores">Professores</a>
-    <a href="#locais">Locais das Aulas</a>
-    <a href="#horarios">Horários</a>
-    <a href="#mensalidade">Mensalidade</a>
-    <a href="#uniforme">Uniforme</a>
-    <a href="#matricula">Matrícula Online</a>
-    <a href="#contato">Contato</a>
-</nav>
-
-<section id="projeto" class="container">
-    <h2 class="section-title">Sobre o Projeto</h2>
-    <p>A TS KIDS é uma escolinha de futebol que visa o desenvolvimento integral da criança. Nossa metodologia envolve a junção de professores de educação física e estudantes de educação física que são ex-atletas de futebol. Buscamos trabalhar padrões de jogo, aspectos táticos, cognitivos, físicos e técnicos, além de focar nos aspectos sociais e nos benefícios de saúde mental para as crianças.</p>
-</section>
-
-<section id="professores" class="container">
-    <h2 class="section-title">Professores</h2>
-    <div class="professores">
-        <div>
-            <img src="/mnt/data/IMG-20240313-WA0163.jpg" alt="Diego William">
-            <p>Diego William</p>
+    <header>
+        <img src="logo.png" alt="TS KIDS Logo">
+        <h1>TS KIDS</h1>
+    </header>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#professores">Professores</a>
+        <a href="#locais">Locais</a>
+        <a href="#horarios">Horários</a>
+        <a href="#matricula">Matrícula Online</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    <div class="content">
+        <div id="sobre" class="section">
+            <h2>Sobre o Projeto</h2>
+            <p>
+                A TS KIDS é uma escolinha de futebol que visa o desenvolvimento integral da criança. Nossa metodologia envolve a junção de professores de Educação Física e estudantes de Educação Física que são ex-atletas de futebol. Nosso trabalho busca o desenvolvimento integral da criança, trabalhando padrões de jogo, trabalhos táticos, cognitivos, físicos e técnicos, além de aspectos sociais e os benefícios de saúde mental para essas crianças.
+            </p>
         </div>
-        <div>
-            <img src="/mnt/data/IMG-20240613-WA0349.jpg" alt="Pedro Simplício">
-            <p>Pedro Simplício</p>
+        <div id="professores" class="section">
+            <h2>Professores</h2>
+            <div class="img-grid">
+                <img src="diego.jpg" alt="Diego William">
+                <img src="pedro.jpg" alt="Pedro Simplício">
+                <img src="thiaguinho.jpg" alt="Thiaguinho">
+                <img src="daday.jpg" alt="Daday">
+                <img src="joao.jpg" alt="João Vitor">
+                <img src="tito.jpg" alt="Tito">
+            </div>
         </div>
-        <div>
-            <img src="/mnt/data/IMG-20240515-WA0469.jpg" alt="Thiaguinho">
-            <p>Thiaguinho</p>
+        <div id="locais" class="section">
+            <h2>Locais das Aulas</h2>
+            <div class="img-grid">
+                <img src="arena_jacare.jpg" alt="Arena Jacaré">
+                <img src="arena_prime.jpg" alt="Arena Prime">
+            </div>
+            <p>
+                As aulas na Arena Jacaré acontecem nas terças e quintas às 08:00 e 16:40. Na Arena Prime, localizada próximo ao Gauchão da Fraga Maia, acontecem nas segundas e quartas às 16:40.
+            </p>
         </div>
-        <div>
-            <img src="/mnt/data/IMG-20240313-WA0163.jpg" alt="Daday">
-            <p>Daday</p>
+        <div id="horarios" class="section">
+            <h2>Horários</h2>
+            <p>
+                <strong>Arena Jacaré:</strong><br>
+                Terça e Quinta: 08:00 e 16:40
+            </p>
+            <p>
+                <strong>Arena Prime:</strong><br>
+                Segunda e Quarta: 16:40
+            </p>
         </div>
-        <div>
-            <img src="/mnt/data/IMG-20240613-WA0349.jpg" alt="João Vitor">
-            <p>João Vitor</p>
+        <div id="matricula" class="section">
+            <h2>Matrícula Online</h2>
+            <p>Para matricular seu filho, acesse o <a href="https://forms.gle/k8GJRX2zhHxYmKzp8" target="_blank">formulário de matrícula online</a>.</p>
         </div>
-        <div>
-            <img src="/mnt/data/IMG-20240515-WA0469.jpg" alt="Tito">
-            <p>Tito</p>
-        </div>
-    </div>
-</section>
-
-<section id="locais" class="container">
-    <h2 class="section-title">Locais das Aulas</h2>
-    <div class="locais">
-        <div>
-            <img src="/mnt/data/IMG-20240313-WA0163.jpg" alt="Arena Jacaré">
-            <p>Arena Jacaré</p>
-        </div>
-        <div>
-            <img src="/mnt/data/IMG-20240613-WA0349.jpg" alt="Arena Prime">
-            <p>Arena Prime</p>
+        <div id="contato" class="section">
+            <h2>Contato</h2>
+            <p>WhatsApp: <a href="https://wa.me/5575981094667" target="_blank">75 98109-4667</a></p>
+            <p>Email: <a href="mailto:TSKIDSFSA@gmail.com">TSKIDSFSA@gmail.com</a></p>
         </div>
     </div>
-</section>
-
-<section id="horarios" class="container">
-    <h2 class="section-title">Horários</h2>
-    <p>Arena Jacaré:</p>
-    <ul>
-        <li>Terça e Quinta: 08:00</li>
-        <li>Terça e Quinta: 16:40</li>
-    </ul>
-    <p>Arena Prime (próxima ao Gauchão da Fraga Maia):</p>
-    <ul>
-        <li>Segunda e Quarta: 16:40</li>
-    </ul>
-</section>
-
-<section id="mensalidade" class="container">
-    <h2 class="section-title">Mensalidade</h2>
-    <p>Mensalidade: R$150,00</p>
-    <p>Uniforme: R$100,00</p>
-</section>
-
-<section id="uniforme" class="container">
-    <h2 class="section-title">Uniforme</h2>
-    <div class="uniforme">
-        <div>
-            <img src="/mnt/data/IMG-20240515-WA0469.jpg" alt="Uniforme">
-        </div>
-    </div>
-</section>
-
-<section id="matricula" class="container">
-    <h2 class="section-title">Matrícula Online</h2>
-    <p>Para realizar a matrícula online, clique no link abaixo:</p>
-    <a href="https://forms.gle/k8GJRX2zhHxYmKzp8" target="_blank">Formulário de Matrícula</a>
-</section>
-
-<section id="contato" class="container">
-    <h2 class="section-title">Contato</h2>
-    <p>Telefone: <a href="https://wa.me/5575981094667" target="_blank">75 98109-4667</a></p>
-    <p>Email: <a href="mailto:tskidsfsa@gmail.com">tskidsfsa@gmail.com</a></p>
-</section>
-
-<footer>
-    <p>&copy; 2024 TS KIDS. Todos os direitos reservados.</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 TS KIDS. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
